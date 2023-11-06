@@ -1,0 +1,24 @@
+<div class="mycontainer">
+    <div class="card text-white bg-primary m-5" style="max-width: 18rem;">
+        <div class="card-header text-center">
+            <h2>{{city}}</h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Temperature: {{temperature}} °{{units=='imperial' ? 'F' : 'C'}}</p>
+            <p class="card-text">Wind pressure: {{pressure}} hPa</p>
+            <p class="card-text">Humidity: {{humidity}} %</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <form class="myRadioButtons">
+                <label class="radio-inline">
+                    <input type="radio" (change)="onRadioButtonChange()" name="unitsRadioButtons"
+                        [checked]="units=='imperial' ? true : false">°F
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" (change)="onRadioButtonChange()" name="unitsRadioButtons">°C
+                </label>
+
+            </form>
+        </div>
+    </div>
+</div>
